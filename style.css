@@ -1,0 +1,145 @@
+/* Configurações gerais e cores */
+:root {
+  --rosa-principal: #e91e63;
+  --roxo-secundario: #8e24aa;
+  --fundo-pagina: #fcf8fa;
+  --fundo-card-rosa: #fce4ec;
+  --fundo-card-roxo: #f3e5f5;
+  --texto-escuro: #2c2c2c;
+  --texto-suave: #666666;
+  --borda-cor: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--fundo-pagina);
+  color: var(--texto-escuro);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: var(--rosa-principal);
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  color: var(--roxo-secundario);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Estilo dos Cards com fundo colorido suave */
+.card {
+  background-color: var(--fundo-card-rosa);
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Alterna a cor de fundo dos cards para roxo claro */
+.card:nth-child(even) {
+  background-color: var(--fundo-card-roxo);
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-bottom: 8px;
+}
+
+.card-valor {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--texto-escuro);
+}
+
+.card-status {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--roxo-secundario);
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Tabela Responsiva */
+.tabela-container {
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--borda-cor);
+}
+
+th {
+  background-color: var(--rosa-principal);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Destaque para as situações na tabela */
+.situacao-bom {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.situacao-indisponivel {
+  color: #757575;
+  font-style: italic;
+}
+
+/* Visual para telas pequenas (Celular) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
